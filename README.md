@@ -56,3 +56,17 @@ npm start
 → 回答後、プロジェクト内のコードに amplify のディレクトリが生成
 
 ## モジュール 3 : 認証を追加する
+
+### Amplify ライブラリをインストールする
+
+npm install aws-amplify @aws-amplify/ui-react
+
+amplify add auth
+
+? Do you want to use the default authentication and security configuration? Default configuration
+? How do you want users to be able to sign in? Username
+? Do you want to configure advanced settings? No, I am done.
+
+### 認証サービスをデプロイする
+
+amplify push --y
