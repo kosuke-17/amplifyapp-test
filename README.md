@@ -41,6 +41,18 @@ npm start
 
 ### AWS Amplify を使用して Github と結合することによるデプロイが完了した
 
-<!-- ## モジュール 2 :ローカル Amplify アプリを初期化する
+## モジュール 2 :ローカル Amplify アプリを初期化する
 
-Amplify cli をインストールして設定 -->
+- Amplify cli をグローバルインストールして設定
+  `npm install -g @aws-amplify/cli`
+- Cli の設定
+  `amplify configure`
+  → コンソールに移動する
+
+- プロジェクトのバックエンド環境を設定(ローカル設定手順に記載あり)
+
+`amplify pull --appId **\*\*\*\*** --envName **\*\***`
+→ ターミナルで聞かれることに答える
+→ 回答後、プロジェクト内のコードに amplify のディレクトリが生成
+
+## モジュール 3 : 認証を追加する
