@@ -70,3 +70,17 @@ amplify add auth
 ### 認証サービスをデプロイする
 
 amplify push --y
+
+### Amplify リソースを使用して React プロジェクトを設定する(認証コンポーネントの設置)
+
+### App.js に認証フローを追加する
+
+npm start
+→ エラーの発生
+export 'AmplifySignOut' (imported as 'AmplifySignOut') was not found in '@aws-amplify/ui-react'
+
+- 解決策：バージョンを上げる
+  npm remove @aws-amplify/ui-react
+  npm install @aws-amplify/ui-react@1.2.25
+
+npm list --depth=0
