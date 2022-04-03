@@ -59,9 +59,9 @@ npm start
 
 ### Amplify ライブラリをインストールする
 
-npm install aws-amplify @aws-amplify/ui-react
+`npm install aws-amplify @aws-amplify/ui-react`
 
-amplify add auth
+`amplify add auth`
 
 ? Do you want to use the default authentication and security configuration? Default configuration
 ? How do you want users to be able to sign in? Username
@@ -69,18 +69,44 @@ amplify add auth
 
 ### 認証サービスをデプロイする
 
-amplify push --y
+`amplify push --y`
 
 ### Amplify リソースを使用して React プロジェクトを設定する(認証コンポーネントの設置)
 
 ### App.js に認証フローを追加する
 
-npm start
+`npm start`
 → エラーの発生
 export 'AmplifySignOut' (imported as 'AmplifySignOut') was not found in '@aws-amplify/ui-react'
 
 - 解決策：バージョンを上げる
-  npm remove @aws-amplify/ui-react
-  npm install @aws-amplify/ui-react@1.2.25
+  `npm remove @aws-amplify/ui-react`
+  `npm install @aws-amplify/ui-react@1.2.25`
 
-npm list --depth=0
+`npm list --depth=0`
+
+## モジュール 4 : GraphQL API と データベースサービスを追加する
+
+### GraphQL API とデータベースを作成する
+
+`amplify add api`
+? Please select from one of the below mentioned services: GraphQL
+? Provide API name: notesapp
+? Choose the default authorization type for the API: API Key
+? Enter a description for the API key: demo
+? After how many days from now the API key should expire: 7 (or your preferred expiration)
+? Do you want to configure advanced settings for the GraphQL API: No, I am done.
+? Do you have an annotated GraphQL schema? No
+? Do you want a guided schema creation? Yes
+? What best describes your project: Single object with fields
+? Do you want to edit the schema now? Yes
+
+GraphQL スキーマファイルを開いて確認する
+
+### API をデプロイする
+
+`amplify push --y`
+これは 3 つのことを行います。
+AppSync API を作成する
+DynamoDB テーブルを作成する
+API のクエリに使用できる src/graphql にあるフォルダにローカル GraphQL 操作を行う
