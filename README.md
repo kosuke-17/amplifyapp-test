@@ -110,3 +110,9 @@ GraphQL スキーマファイルを開いて確認する
 AppSync API を作成する
 DynamoDB テーブルを作成する
 API のクエリに使用できる src/graphql にあるフォルダにローカル GraphQL 操作を行う
+
+- amplify アカウントで GraphQL API を表示
+  amplify console api
+
+- Amplify アプリを表示
+  amplify console
